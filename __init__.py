@@ -70,6 +70,10 @@ def get_all_run_ids():
 
     run_ids = os.listdir(root_dir)
 
+
+
+    # csv_file_path = root_dir + run_id + "/logs/sperm/Xception/1_test_a_sd4_to_a_sd1_f/slide_prediction_sperm.csv"
+    run_ids = list(filter(lambda x: os.path.exists(root_dir + x + "/logs/sperm/Xception/1_test_a_sd4_to_a_sd1_f/slide_prediction_sperm.csv"), run_ids))
     run_ids = sorted(run_ids,key= lambda x: x.split("___")[0].replace("Run-",""))
     if len(run_ids) == 0:
         return jsonify({"run_ids": ""})
