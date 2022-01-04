@@ -108,7 +108,7 @@ def single_file_upload():
             # filename = secure_filename(file.filename)
             os.makedirs(os.path.dirname(os.path.join(root_dir,run_id, file_name)), exist_ok=True)
             # print(file_name,file.filename,filename)
-            file.save(os.path.join(root_dir,run_id, file_name))
+            file.save(os.path.join(root_dir.replace(" ","_"),run_id.replace(" ","_"), file_name.replace(" ","_")))
             # file.save(os.path.join(root_dir+"/"+run_id+], filename))
             # print(' * file uploaded', filename)
     return 'uploaded successfully'
