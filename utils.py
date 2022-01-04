@@ -1,7 +1,6 @@
 import os
 import csv
 import warnings
-from Sperm_Morphology_App import app as application
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 import os
