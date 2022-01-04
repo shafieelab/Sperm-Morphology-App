@@ -1,4 +1,4 @@
 import sys
 sys.path.insert(0, '/var/www/html/')
 sys.path.insert(0, '/var/www/html/Sperm_Morphology_App')
-from Sperm_Morphology_App import app as application
+import Sperm_Morphology_App.app as application
