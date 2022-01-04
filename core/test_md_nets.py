@@ -206,7 +206,7 @@ def parge_args(project_root,run_id,img_paths_file):
         # trained_model_path= "../models/sperm/ResNet50/1_train_h_sd4_to_a_sd3/best_model.pth.tar",
         # trained_model_path= "../models/sperm/Xception/2_train_h_sd4_to_a_sd1_f/best_model.pth.tar",
 
-        trained_model_path="core/best_model.pth.tar",
+        trained_model_path="/var/www/html/Sperm_Morphology_App/core/best_model.pth.tar",
         # trained_model_path= None,
         no_of_layers_freeze=13,
 

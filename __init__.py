@@ -72,7 +72,7 @@ def get_all_run_ids():
 
     run_ids = sorted(run_ids,key= lambda x: x.split("___")[0].replace("Run-",""))
     if len(run_ids) == 0:
-        return jsonify({"run_ids": []})
+        return jsonify({"run_ids": ""})
     user_data = ""
     for user in run_ids:
         user_data += user + ";"
