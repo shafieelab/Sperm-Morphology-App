@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-temp_1_1 = cv2.imread("/home/ubuntu/Sperm_Morphology_App/templates/Templates_Smartphone/1_1.jpg")
+temp_1_1 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/Templates_Smartphone/1_1.jpg")
 # temp_1_2 = cv2.imread("Templates_Smartphone/1_2.jpg")
-temp_1_3 = cv2.imread("/home/ubuntu/Sperm_Morphology_App/templates/Templates_Smartphone/1_3.jpg")
+temp_1_3 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/Templates_Smartphone/1_3.jpg")
 # temp_1_4 = cv2.imread("Templates_Smartphone/1_4.jpg")
-temp_1_5 = cv2.imread("/home/ubuntu/Sperm_Morphology_App/templates/Templates_Smartphone/1_5.jpg")
+temp_1_5 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/Templates_Smartphone/1_5.jpg")
 # temp_6 = cv2.imread("Templates_Microscope/6_head.png")
 #
 # temp_7_1 = cv2.imread("Templates_Microscope/7 (1).png")
