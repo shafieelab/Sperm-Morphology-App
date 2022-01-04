@@ -14,7 +14,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 cors = CORS(app)
 
-root_dir = "data/"
+root_dir = "/var/www/html/Sperm_Morphology_App/data/"
 ALLOWED_EXTENSIONS = set([ 'png', 'jpg', 'jpeg', 'gif', 'bmp', 'tif', 'tiff'])
 
 
