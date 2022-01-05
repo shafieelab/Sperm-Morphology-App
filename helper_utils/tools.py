@@ -161,7 +161,14 @@ def testing_sperm_slides(loader, model, logs_path, slide_annotation_file_path, n
                         true_value_slide = row[1]
 
         main_image_results.append(
-            [key, zero_per, one_per, count0, count1, total, sd, mean])
+            [key,
+             np.round(zero_per, 4),
+             np.round(one_per, 4),
+             np.round(count0, 4),
+             np.round(count1, 4),
+             np.round(total, 4),
+             np.round(sd, 4),
+             np.round(mean, 4)])
 
         if print_info:
             print("|", key + ":-", "| Good Sperm ", round(zero_per, 3),
@@ -169,7 +176,7 @@ def testing_sperm_slides(loader, model, logs_path, slide_annotation_file_path, n
     with open(logs_path + '/slide_prediction_sperm.csv', 'a') as f:
         writer = csv.writer(f)
         writer.writerow(["Slide_Name", "Good_%", "Bad_%", "Good_Count",
-                         "Bad_Count", "Total_Count","SD_Good_%",
+                         "Bad_Count", "Total_Count", "SD_Good_%",
                          "Mean_Good_%"])
         writer.writerows(main_image_results)
 
@@ -257,7 +264,7 @@ def validation_loss(loader, model, num_classes, logs_path, data_name='valid_sour
     predict_numpy = predict.numpy()
 
     with open(logs_path + '/' + dset + "_" + data_name + "_" + (
-    str(num_iterations) if is_training else "Final") + '_confidence_values_.csv',
+            str(num_iterations) if is_training else "Final") + '_confidence_values_.csv',
               mode='w') as file:
         csv_writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
