@@ -110,6 +110,13 @@ def single_file_upload():
         if file and file.filename.split('.')[-1].lower() in ALLOWED_EXTENSIONS:
 
             # filename = secure_filename(file.filename)
+            if len(file_name.split('/')) == 2:
+                file_name = "main_folder/"+file_name
+            elif len(file_name.split('/')) == 3:
+                file_name = file_name
+            else:
+                # return jsonify({"status": "error", "message": "file name is not correct"})
+                return "file name is not correct"
             os.makedirs(os.path.dirname(os.path.join(root_dir,run_id, file_name)), exist_ok=True)
             # print(file_name,file.filename,filename)
             file.save(os.path.join(root_dir.replace(" ","_"),run_id.replace(" ","_"), file_name.replace(" ","_")))
@@ -133,3 +140,4 @@ def download_run_results():
 if __name__ == '__main__':
     app.run(debug=True)
     # run_sm_model()
+    # extract_slides('data/', 'Run-2___2022-1-3_19:47:28','slides_2')

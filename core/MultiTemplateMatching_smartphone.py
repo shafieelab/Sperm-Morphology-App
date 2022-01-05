@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-temp_1_1 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/Templates_Smartphone/1_1.jpg")
+# temp_1_1 = cv2.imread("templates/Templates_Smartphone/1_1.jpg")
 # temp_1_2 = cv2.imread("Templates_Smartphone/1_2.jpg")
-temp_1_3 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/Templates_Smartphone/1_3.jpg")
+# temp_1_3 = cv2.imread("templates/Templates_Smartphone/1_3.jpg")
 # temp_1_4 = cv2.imread("Templates_Smartphone/1_4.jpg")
-temp_1_5 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/Templates_Smartphone/1_5.jpg")
+# temp_1_5 = cv2.imread("templates/Templates_Smartphone/1_5.jpg")
 # temp_6 = cv2.imread("Templates_Microscope/6_head.png")
 #
 # temp_7_1 = cv2.imread("Templates_Microscope/7 (1).png")
@@ -113,7 +113,7 @@ def extract_slides(root_dir, run_id,folder_name):
 
             try:
                 listHit = matchTemplates(template_list, img, score_threshold=0.7, method=cv2.TM_CCOEFF_NORMED,
-                                         maxOverlap=0.9)
+                                         maxOverlap=0.5)
 
                 # continue
 
