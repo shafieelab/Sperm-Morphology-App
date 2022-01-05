@@ -53,7 +53,8 @@ def testing_sperm_slides(loader, model, logs_path, slide_annotation_file_path, n
     # predict_numpy = predict.numpy()
     predict_numpy = []
     for value in range(len(all_output_numpy)):
-        if float(all_output_numpy[value][0]) > 0.1809:
+        # if float(all_output_numpy[value][0]) > 0.1809:
+        if float(all_output_numpy[value][0]) > 0.79:
             predict_numpy.append(0)
         else:
             predict_numpy.append(1)

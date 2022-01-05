@@ -190,7 +190,7 @@ def train(config):
         total_loss = loss_params["trade_off"] * transfer_loss + classifier_loss
         total_loss.backward()
         optimizer.step()
-    torch.save(best_model, osp.join(config["output_path"], "best_model.pth.tar"))
+    torch.save(best_model, osp.join(config["output_path"], "boar_verility_best_model.pth.tar"))
     return best_acc
 
 if __name__ == "__main__":

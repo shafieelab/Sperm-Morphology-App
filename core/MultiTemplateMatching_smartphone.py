@@ -50,15 +50,44 @@ temp_1_5 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/Templates_Sm
 #
 #                  ]
 
+
+temp_sd1_1 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_1.png")
+temp_sd1_2 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_2.png")
+temp_sd1_3 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_3.png")
+temp_sd1_4 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_4.png")
+temp_sd1_5 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_5.png")
+temp_sd1_6 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_6.png")
+temp_sd1_7 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_7.png")
+temp_sd1_8 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_8.png")
+temp_sd1_9 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_9.png")
+temp_sd1_10 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_10.png")
+temp_sd1_11 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_11.png")
+temp_sd1_12 = cv2.imread("/var/www/html/Sperm_Morphology_App/templates/human_smartphone_templates/File_12.png")
+
+
+# template_list = [
+#     ('temp_1_1', temp_1_1),
+#     # ('temp_1_2',temp_1_2),
+#     ('temp_1_3', temp_1_3),
+#     ('temp_1_5', temp_1_5),
+#     # ('temp_1_4',temp_1_4),
+# ]
+
 template_list = [
-    ('temp_1_1', temp_1_1),
-    # ('temp_1_2',temp_1_2),
-    ('temp_1_3', temp_1_3),
-    ('temp_1_5', temp_1_5),
-    # ('temp_1_4',temp_1_4),
+    ('temp_sd1_1',temp_sd1_1),
+    ('temp_sd1_2',temp_sd1_2),
+    ('temp_sd1_3',temp_sd1_3),
+    ('temp_sd1_4',temp_sd1_4),
+    ('temp_sd1_5',temp_sd1_5),
+    ('temp_sd1_6',temp_sd1_6),
+    ('temp_sd1_7',temp_sd1_7),
+    ('temp_sd1_8',temp_sd1_8),
+    ('temp_sd1_9',temp_sd1_9),
+    ('temp_sd1_10',temp_sd1_10),
+    ('temp_sd1_11',temp_sd1_11),
+    ('temp_sd1_12',temp_sd1_12),
+
 ]
-
-
 def extract_slides(root_dir, run_id,folder_name):
     input_path = root_dir + run_id + "/"+ folder_name + "/"
     output_path = root_dir + run_id + "/slides_heads/"

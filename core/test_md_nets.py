@@ -95,7 +95,7 @@ def test(config, dset_loaders, model_path_for_testing=None):
         model = torch.load(model_path_for_testing,map_location=torch.device('cpu'))
     else:
 
-        model = torch.load(osp.join(config["model_path"], "best_model.pth.tar"))
+        model = torch.load(osp.join(config["model_path"], "core/train_sd4_to_sd1_slides/best_model.pth.tar"))
 
     # val_info = validation_loss(dset_loaders, model, dset=config['dataset'],
     #                            num_classes=config["network"]["params"]["class_num"],
@@ -203,10 +203,11 @@ def parge_args(project_root,run_id,img_paths_file):
         image_size=170,
         crop_size=170,
         # trained_model_path= "../models/best_sd4_human_model.pth.tar",
-        # trained_model_path= "../models/sperm/ResNet50/1_train_h_sd4_to_a_sd3/best_model.pth.tar",
-        # trained_model_path= "../models/sperm/Xception/2_train_h_sd4_to_a_sd1_f/best_model.pth.tar",
+        # trained_model_path= "../models/sperm/ResNet50/1_train_h_sd4_to_a_sd3/boar_verility_best_model.pth.tar",
+        # trained_model_path= "../models/sperm/Xception/2_train_h_sd4_to_a_sd1_f/boar_verility_best_model.pth.tar",
 
-        trained_model_path="/var/www/html/Sperm_Morphology_App/core/best_model.pth.tar",
+        # trained_model_path="/var/www/html/Sperm_Morphology_App/core/boar_verility_best_model.pth.tar",
+        trained_model_path="/var/www/html/Sperm_Morphology_App/core/train_sd4_to_sd1_slides/best_model.pth.tar",
         # trained_model_path= None,
         no_of_layers_freeze=13,
 

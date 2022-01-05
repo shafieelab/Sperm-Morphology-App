@@ -230,7 +230,7 @@ def image_classification_test(loader, model, test_10crop=False, num_iterations=0
 def train(config):
     now = dt_string.replace(" ", "_").replace(":", "_").replace(".", "_")
     logger = Logger(config["logs_path"] + "tensorboard/" + now)
-    model_path = osp.join(config["output_path"], "best_model.pth.tar")
+    model_path = osp.join(config["output_path"], "boar_verility_best_model.pth.tar")
     early_stopping = EarlyStopping(patience=200, verbose=True, model_path=model_path)
 
     prep_dict = {}
@@ -436,7 +436,7 @@ def train(config):
         if early_stopping.early_stop:
             print("Early stopping")
 
-            # torch.save(nn.Sequential(base_network), osp.join(config["model_path"], "best_model.pth.tar"))
+            # torch.save(nn.Sequential(base_network), osp.join(config["model_path"], "boar_verility_best_model.pth.tar"))
 
             break
 
